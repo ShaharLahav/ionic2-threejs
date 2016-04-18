@@ -1,0 +1,51 @@
+<ion-navbar *navbar>
+    <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Hello Ionic</ion-title>
+</ion-navbar>
+
+
+<ion-content padding class="getting-started">
+
+    <h3>Welcome to your first Ionic app!</h3>
+
+    <p>
+        This starter project is our way of helping you get a functional app running in record time.
+    </p>
+    <p>
+        Follow along on the tutorial section of the Ionic docs!
+    </p>
+    <p>
+        <button primary menuToggle>Toggle Menu</button>
+    </p>
+
+    <!--<ion-list>
+  <ion-item>
+    Left Icon Button
+    <button outline item-right>
+      <ion-icon name="star"></ion-icon>
+      Left Icon
+    </button>
+  </ion-item>
+</ion-list>-->
+
+    <!--<button fab="" fab-left="" fab-top="" primary="" class="disable-hover button button-default button-fab button-icon-only button-fab-top button-primary"><span class="button-inner">
+      <ion-icon name="add" role="img" class="ion-md-add" aria-label="add"></ion-icon>
+    </span><ion-button-effect style="left: 33px; transform: scale(1) translateZ(0px); height: 87.8635px; width: 87.8635px; margin-left: -43.9318px; margin-top: -43.9318px; top: 29px; opacity: 0; transition: transform 301.013ms, opacity 210.709ms 90.304ms;"></ion-button-effect></button>-->
+    <!--<button fab dark fab-bottom fab-right style="z-index: 999">
+  <ion-icon name='heart' is-active="false"></ion-icon>
+</button>-->
+
+    <button fab danger fab-bottom fab-center (click)="openModal()">
+        <ion-icon name='add'></ion-icon>
+    </button>
+    <center id="threeContent"></center>
+    <!--<button fab secondary fab-top fab-center>
+      <ion-icon name='compass' is-active="false"></ion-icon>
+    </button>
+    <button fab danger fab-top fab-right>
+      <ion-icon name='mic' is-active="false"></ion-icon>
+    </button>-->
+
+</ion-content>

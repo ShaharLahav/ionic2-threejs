@@ -1,0 +1,42 @@
+<!--
+  Generated template for the InputModalPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-toolbar>
+    <ion-title>
+        Description
+    </ion-title>
+    <ion-buttons start>
+        <button (click)="dismiss()">
+            <span primary showWhen="ios">Cancel</span>
+            <ion-icon name="md-close"></ion-icon>
+            <!--showWhen="android,windows"-->
+        </button>
+    </ion-buttons>
+</ion-toolbar>
+
+
+<!--<ion-navbar *navbar>
+  <ion-title>InputModal</ion-title>
+</ion-navbar>-->
+
+<ion-content padding class="input-modal">
+    <ion-list>
+
+        <ion-item>
+            <ion-label floating>Username</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password"></ion-input>
+        </ion-item>
+
+    </ion-list>
+    <div padding>
+        <button primary block>Add</button>
+    </div>
+</ion-content>
