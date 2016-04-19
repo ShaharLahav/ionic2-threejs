@@ -12,7 +12,12 @@ export class HelloIonicPage {
     renderer: any;
     cube: any;
     render: any;
+    controls: any;
+    action: string;
+
     constructor(private nav: NavController) {
+        this.action = "animate";
+
         this.scene = new THREE.Scene();
         this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         this.renderer = new THREE.WebGLRenderer({ alpha: true });
@@ -20,9 +25,9 @@ export class HelloIonicPage {
         this.render = () => {
             requestAnimationFrame(this.render);
 
-            this.cube.rotation.x += 0.01;
-            this.cube.rotation.y += 0.02;
-            this.cube.rotation.z += 0.03;
+            //  this.cube.rotation.x += 0.01;
+            // this.cube.rotation.y += 0.02;
+            // this.cube.rotation.z += 0.03;
             // console.log(this.cube.MeshBasicMaterial.color);
             // this.cube.MeshBasicMaterial.color += 10;
             this.renderer.render(this.scene, this.camera);
@@ -35,8 +40,9 @@ export class HelloIonicPage {
             var material = new THREE.MeshBasicMaterial({ color: 0x00ff00, wireframe: true });
             this.cube = new THREE.Mesh(geometry, material);
             this.scene.add(this.cube);
-
             this.camera.position.z = 5;
+            this.controls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
+            this.controls.addEventListener('change', this.render);
             this.render();
 
         }, 1);
@@ -44,11 +50,12 @@ export class HelloIonicPage {
 
     }
 
-
-
-
     openModal() {
         let modal = Modal.create(InputModalPage);
         this.nav.present(modal);
     }
+
+    // actionFunc() {
+    //     this.action = this.action=="animate"?"control":"animate";
+    // }
 }
